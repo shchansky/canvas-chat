@@ -11,3 +11,8 @@ export const Container = styled.div`
   box-shadow: 0 4px 5px gray;
   z-index: 99;
 `;
+
+
+export const Button = styled.button`
+
+`;

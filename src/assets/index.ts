@@ -1,1 +1,1 @@
-export {}
+export * as Icons from "./icons";
