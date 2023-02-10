@@ -12,15 +12,10 @@ export const Container = styled.div`
   z-index: 99;
 `;
 
-export const Button = styled.button`
-  cursor: pointer;
-`;
-
 export const Tools = styled.div`
   display: flex;
   gap: 8px;
 `;
-
 
 export const Menu = styled.div`
   display: flex;

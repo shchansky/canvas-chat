@@ -6,4 +6,4 @@ export { ReactComponent as RectIcon } from "./rect.svg";
 export { ReactComponent as RedoIcon } from "./redo.svg";
 export { ReactComponent as SaveIcon } from "./save.svg";
 export { ReactComponent as UndoIcon } from "./undo.svg";
-export { ReactComponent as PaletteIcon } from "./palette.svg";
+
