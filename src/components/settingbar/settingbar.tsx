@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import * as Markup from "./settingbar.styles";
 
 export const Settingbar = () => {
-  return (
-    <div>Settngbar</div>
-  )
-}
+  return <Markup.Container>Settngbar</Markup.Container>;
+};
