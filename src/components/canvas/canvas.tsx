@@ -17,7 +17,7 @@ export const Canvas = observer(() => {
 
   return (
     <Markup.Container>
-      <canvas ref={canvasRef} width={600} height={600} />
+      <canvas ref={canvasRef} width={600} height={600} onClick= {(e)=>{}}/>
     </Markup.Container>
   );
 });
