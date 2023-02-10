@@ -9,4 +9,5 @@ export const Container = styled.div`
   position: absolute;
   width: 100%;
   box-shadow: 0 4px 5px gray;
+  z-index: 99;
 `;
