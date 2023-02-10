@@ -1,16 +1,16 @@
 import { makeAutoObservable } from "mobx";
 
-export class CanvasState {
-  public canvas: any | null = null;
+class CanvasState {
+  public canvas: HTMLCanvasElement | null = null;
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  public setCanvas(canvasRef: any| null) {
-
-    this.canvas = canvasRef
-  };
+  public setCanvas(canvasRef: HTMLCanvasElement | null) {
+    this.canvas = canvasRef;
+  }
 }
 
-export default new CanvasState
+// eslint-disable-next-line
+export default new CanvasState();

@@ -7,10 +7,9 @@ export class ToolState {
     makeAutoObservable(this);
   }
 
-  public setTools(tool: any| null) {
-
-    this.tool = tool
-  };
+  public setTools(tool: any | null) {
+    this.tool = tool;
+  }
 }
 
-export default new ToolState
+export default new ToolState();
