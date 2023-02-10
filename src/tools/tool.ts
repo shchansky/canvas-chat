@@ -1,9 +1,18 @@
-export default class Tools {
+export default class Tool {
   public canvas: HTMLCanvasElement | null;
-  public ctx: CanvasRenderingContext2D | null 
+  public ctx: CanvasRenderingContext2D | null;
 
-  constructor(canvas: HTMLCanvasElement ) {
+  constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
-    this.ctx  = canvas.getContext("2d")
+    this.ctx = canvas.getContext("2d");
+    this.destroyEvents();
+  }
+
+  public destroyEvents() {
+    if (!this.canvas) return;
+
+    this.canvas.onmousemove = null;
+    this.canvas.onmousedown = null;
+    this.canvas.onmouseup = null;
   }
 }

@@ -12,4 +12,5 @@ export class ToolState {
   }
 }
 
+// eslint-disable-next-line
 export default new ToolState();
