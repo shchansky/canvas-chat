@@ -1,55 +1,30 @@
-// import React from "react";
-// import { Icons } from "assets";
-// import * as Markup from "./toolbar.styles";
-
-// export const Toolbar = () => {
-//   return (
-//     <Markup.Container>
-//       <Markup.Tools>
-//         <Markup.Button>
-//           <Icons.BrushIcon />
-//         </Markup.Button>
-//         <Markup.Button>
-//           <Icons.RectIcon />
-//         </Markup.Button>
-//         <Markup.Button>
-//           <Icons.CircleIcon />
-//         </Markup.Button>
-//         <Markup.Button>
-//           <Icons.EraserIcon />
-//         </Markup.Button>
-//         <Markup.Button>
-//           <Icons.LineIcon />
-//         </Markup.Button>
-
-//         <input type="color" />
-//       </Markup.Tools>
-//       <Markup.Menu>
-//         <Markup.Button>
-//           <Icons.UndoIcon />
-//         </Markup.Button>
-//         <Markup.Button>
-//           <Icons.RedoIcon />
-//         </Markup.Button>
-//         <Markup.Button>
-//           <Icons.SaveIcon />
-//         </Markup.Button>
-//       </Markup.Menu>
-//     </Markup.Container>
-//   );
-// };
-
 import React from "react";
 import { Icons } from "assets";
 import { Button } from "components/button";
+import toolState from "store/tool-state";
 import * as Markup from "./toolbar.styles";
+import Brush from "tools/brush";
+import Rect from "tools/rect";
+import canvasState from "store/canvas-state";
 
 export const Toolbar = () => {
   return (
     <Markup.Container>
       <Markup.Tools>
-        <Button icon={<Icons.BrushIcon />} />
-        <Button icon={<Icons.RectIcon />} />
+        <Button
+          icon={<Icons.BrushIcon />}
+          onClick={() => {
+            if (!canvasState.canvas) return;
+            toolState.setTools(new Brush(canvasState.canvas));
+          }}
+        />
+        <Button
+          icon={<Icons.RectIcon />}
+          onClick={() => {
+            if (!canvasState.canvas) return;
+            toolState.setTools(new Rect(canvasState.canvas));
+          }}
+        />
         <Button icon={<Icons.CircleIcon />} />
         <Button icon={<Icons.EraserIcon />} />
         <Button icon={<Icons.LineIcon />} />

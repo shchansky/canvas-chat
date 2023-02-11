@@ -52,7 +52,5 @@ export default class Brush extends Tool {
     this.ctx.lineTo(x, y);
     /** stroke() - метод, чтобы обводил линиюю canvas*/
     this.ctx.stroke();
-
-    console.log("draw");
   }
 }
