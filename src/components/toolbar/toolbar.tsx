@@ -26,7 +26,6 @@ export const Toolbar = () => {
             toolState.setTools(new Rect(canvasState.canvas));
           }}
         />
-
         <Button
           icon={<Icons.CircleIcon />}
           onClick={() => {
@@ -34,11 +33,8 @@ export const Toolbar = () => {
             toolState.setTools(new Circle(canvasState.canvas));
           }}
         />
-
-
         <Button icon={<Icons.EraserIcon />} />
         <Button icon={<Icons.LineIcon />} />
-
         <input type="color" />
       </Markup.Tools>
       <Markup.Menu>
