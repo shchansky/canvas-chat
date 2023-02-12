@@ -25,9 +25,9 @@ export const Toolbar = () => {
             toolState.setTools(new Rect(canvasState.canvas));
           }}
         />
-        <Button icon={<Icons.CircleIcon />} />
+        {/* <Button icon={<Icons.CircleIcon />} />
         <Button icon={<Icons.EraserIcon />} />
-        <Button icon={<Icons.LineIcon />} />
+        <Button icon={<Icons.LineIcon />} /> */}
 
         <input type="color" />
       </Markup.Tools>
