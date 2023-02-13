@@ -6,6 +6,7 @@ import * as Markup from "./toolbar.styles";
 import Brush from "tools/brush";
 import Rect from "tools/rect";
 import Circle from "tools/circle";
+import Eraser from "tools/eraser";
 import canvasState from "store/canvas-state";
 
 export const Toolbar = () => {
@@ -33,7 +34,16 @@ export const Toolbar = () => {
             toolState.setTools(new Circle(canvasState.canvas));
           }}
         />
-        <Button icon={<Icons.EraserIcon />} />
+        {/* <Button icon={<Icons.EraserIcon />} /> */}
+
+        <Button
+          icon={<Icons.EraserIcon />}
+          onClick={() => {
+            if (!canvasState.canvas) return;
+            toolState.setTools(new Eraser(canvasState.canvas));
+          }}
+        />
+
         <Button icon={<Icons.LineIcon />} />
         <input type="color" />
       </Markup.Tools>
