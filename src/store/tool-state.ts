@@ -10,6 +10,21 @@ export class ToolState {
   public setTools(tool: any | null) {
     this.tool = tool;
   }
+
+  /** цвет внутри линии */
+  setFillColor(color: string) {
+    this.tool.setFillColor(color);
+  }
+
+  /** цвет внутри обводки линии*/
+  setFillStyle(color: string) {
+    this.tool.setFillStyle(color);
+  }
+
+  /** цвет внутри обводки линии*/
+  setLineWidth(width: number) {
+    this.tool.setLineWidth(width);
+  }
 }
 
 // eslint-disable-next-line
