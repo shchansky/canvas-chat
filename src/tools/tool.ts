@@ -9,15 +9,15 @@ export default class Tool {
   }
 
   /** цвет внутри линии */
-  fillColor(color: string) {
+  setFillColor(color: string) {
     if (!this.ctx) return;
-    this.ctx.fillStyle =  color;
+    this.ctx.fillStyle = color;
   }
 
   /** цвет внутри обводки линии*/
-  fillStyle(color: string) {
+  setFillStyle(color: string) {
     if (!this.ctx) return;
-    this.ctx.strokeStyle =  color;
+    this.ctx.strokeStyle = color;
   }
 
   public destroyEvents() {
