@@ -22,8 +22,8 @@ export class ToolState {
   }
 
   /** цвет внутри обводки линии*/
-  setLineWidth(width: number) {
-    this.tool.setLineWidth(width);
+  setLineWidth(width: string) {
+    this.tool.setLineWidth(Number(width));
   }
 }
 
