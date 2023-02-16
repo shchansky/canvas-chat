@@ -35,8 +35,6 @@ export const Toolbar = () => {
             toolState.setTools(new Circle(canvasState.canvas));
           }}
         />
-        {/* <Button icon={<Icons.EraserIcon />} /> */}
-
         <Button
           icon={<Icons.EraserIcon />}
           onClick={() => {
@@ -44,9 +42,6 @@ export const Toolbar = () => {
             toolState.setTools(new Eraser(canvasState.canvas));
           }}
         />
-
-        {/* <Button icon={<Icons.LineIcon />} /> */}
-
         <Button
           icon={<Icons.LineIcon />}
           onClick={() => {
