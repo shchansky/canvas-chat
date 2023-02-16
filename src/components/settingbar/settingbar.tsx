@@ -12,8 +12,16 @@ export const Settingbar = () => {
           type="number"
           defaultValue={1}
           min={1}
-          max={10}
+          max={30}
           onChange={(ev) => toolState.setLineWidth(ev.target.value)}
+          style={{ margin: "0 10px" }}
+        />
+
+        <label htmlFor="stroke-color">Цвет обводки фигуры</label>
+        <input
+          id="stroke-color"
+          type="color"
+          onChange={(ev) => toolState.setStrokeColor(ev.target.value)}
           style={{ margin: "0 10px" }}
         />
       </div>
