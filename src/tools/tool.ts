@@ -8,6 +8,18 @@ export default class Tool {
     this.destroyEvents();
   }
 
+  /** цвет внутри линии */
+  fillColor(color: string) {
+    if (!this.ctx) return;
+    this.ctx.fillStyle =  color;
+  }
+
+  /** цвет внутри обводки линии*/
+  fillStyle(color: string) {
+    if (!this.ctx) return;
+    this.ctx.strokeStyle =  color;
+  }
+
   public destroyEvents() {
     if (!this.canvas) return;
 
