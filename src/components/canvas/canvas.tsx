@@ -15,6 +15,15 @@ export const Canvas = observer(() => {
     }
   }, []);
 
+
+
+  const mouseDownHandler=()=>{
+    if(!canvasRef.current) return
+    const res = canvasRef.current.toDataURL()
+    /** toDataURL() - делает снимок текущего canvas */
+    canvasState.pushToUndo(canvasRef.current.toDataURL())
+  }
+
   return (
     <Markup.Container>
       <canvas ref={canvasRef} width={600} height={600} onClick= {(e)=>{}}/>

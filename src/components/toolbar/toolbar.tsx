@@ -57,8 +57,8 @@ export const Toolbar = () => {
         <input type="color" onChange={handleChangeColor} />
       </Markup.Tools>
       <Markup.Menu>
-        <Button icon={<Icons.UndoIcon />} />
-        <Button icon={<Icons.RedoIcon />} />
+        <Button icon={<Icons.UndoIcon />} onClick={() => canvasState.undo()} />
+        <Button icon={<Icons.RedoIcon />} onClick={() => canvasState.redo()}/>
         <Button icon={<Icons.SaveIcon />} />
       </Markup.Menu>
     </Markup.Container>
