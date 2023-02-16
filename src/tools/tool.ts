@@ -15,7 +15,7 @@ export default class Tool {
   }
 
   /** цвет внутри обводки линии*/
-  setFillStyle(color: string) {
+  setStrokeColor(color: string) {
     if (!this.ctx) return;
     this.ctx.strokeStyle = color;
   }

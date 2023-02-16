@@ -11,6 +11,11 @@ import Line from "tools/line";
 import canvasState from "store/canvas-state";
 
 export const Toolbar = () => {
+  const handleChangeColor = (ev: React.ChangeEvent<HTMLInputElement>) => {
+    toolState.setFillColor(ev.target.value);
+    toolState.setStrokeColor(ev.target.value);
+  };
+
   return (
     <Markup.Container>
       <Markup.Tools>
@@ -49,8 +54,7 @@ export const Toolbar = () => {
             toolState.setTools(new Line(canvasState.canvas));
           }}
         />
-
-        <input type="color" />
+        <input type="color" onChange={handleChangeColor} />
       </Markup.Tools>
       <Markup.Menu>
         <Button icon={<Icons.UndoIcon />} />

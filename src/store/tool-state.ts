@@ -17,8 +17,8 @@ export class ToolState {
   }
 
   /** цвет внутри обводки линии*/
-  setFillStyle(color: string) {
-    this.tool.setFillStyle(color);
+  setStrokeColor(color: string) {
+    this.tool.setStrokeColor(color);
   }
 
   /** цвет внутри обводки линии*/
