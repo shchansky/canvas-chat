@@ -20,6 +20,12 @@ export default class Tool {
     this.ctx.strokeStyle = color;
   }
 
+  /** цвет внутри обводки линии*/
+  setLineWidth(width: number) {
+    if (!this.ctx) return;
+    this.ctx.lineWidth = width;
+  }
+
   public destroyEvents() {
     if (!this.canvas) return;
 
